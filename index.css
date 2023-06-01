@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body, html{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+nav{
+    padding: 20px;
+    background-color: #2972FF;
+    color: #FFF;
+}
+.imageWrap{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: center;    
+}
+.imageWrap > img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+}
+.imageWrap:hover > img{
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.5);
+}
+section:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+section:first-child > *{
+    width: 50%;
+}
+.aboutMe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: justify;
+}
+.aboutMe h1{
+    font-size: 36px;
+    font-weight: 500;
+    padding: 20px;
+}
+.aboutMe p{
+    padding: 20px;
+}
+h2{
+    padding: 20px 10vw;
+    font-weight: normal;
+}
+section:nth-child(3){
+    display: flex;
+    padding: 20px 5vw;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.review{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.leftreview{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.leftreview>img{
+    border-radius: 64px;
+}
+section:last-child{
+    padding: 40px 10vw;
+}
+section:last-child>*{
+    display: block;
+    text-decoration: none;
+    transition: all 0.33s ease;
+}
+section:last-child>*:hover{
+    color: #5193f5;
+}
+
+@media (max-width: 768px) {
+    section:first-child{
+        flex-wrap: wrap;
+    }
+    section:first-child>*{
+        width: 100%;
+    }
+    section:nth-child(3){
+        display: flex;
+        padding: 20px 5vw;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .rightreview{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+    }
+}
